@@ -1,0 +1,59 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>a63a46eb-29cf-49da-b4e0-05f76c259ab0</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>src\controller\InvMainManager.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <Name>IssueInvestigator</Name>
+    <RootNamespace>IssueInvestigator</RootNamespace>
+    <IsWindowsApplication>False</IsWindowsApplication>
+    <LaunchProvider>Standard Python launcher</LaunchProvider>
+    <EnableNativeCodeDebugging>False</EnableNativeCodeDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="src\" />
+    <Folder Include="src\model\" />
+    <Folder Include="src\controller\" />
+    <Folder Include="src\utility\" />
+    <Folder Include="src\view\" />
+    <Folder Include="src\view\ui\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="src\controller\InvMainManager.py" />
+    <Compile Include="src\model\InvCreateSQLiteDB.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\model\InvDataModel.py" />
+    <Compile Include="src\model\InvOccModel.py" />
+    <Compile Include="src\utility\InvUtility.py" />
+    <Compile Include="src\view\InvMainView.py" />
+    <Compile Include="src\view\InvMainViewScreen.py" />
+    <Compile Include="src\view\InvSplashScreen.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="src\view\ui\InvMainViewScreen.ui" />
+    <Content Include="src\view\ui\InvSplashScreen.ui" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+  <!-- Uncomment the CoreCompile target to enable the Build command in
+       Visual Studio and specify your pre- and post-build commands in
+       the BeforeBuild and AfterBuild targets below. -->
+  <!--<Target Name="CoreCompile" />-->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+</Project>
